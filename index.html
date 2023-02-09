@@ -5,31 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maryland Farm Resources</title>
+    <style>
+        .locationneed {
+            color: blue;
+            text-decoration: underline;
+        }
+        .locationneed:hover {
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
+    <h3>Location Needs:</h3>
     <ul>
-        <li><b>Location Needs</b></li>
-        <li onclick="getPrograms('Cover Crop')">Cover Crop</li>
-        <li onclick="getPrograms('Storage Facilities')">Storage Facilities</li>
-        <li onclick="getPrograms('High Tunnel')">High Tunnel</li>
-        <li onclick="getPrograms('Marketing')">Marketing</li>
-        <li onclick="getPrograms('Equipment')">Equipment</li>
-        <li onclick="getPrograms('Farm Tools')">Farm Tools</li>
-        <li onclick="getPrograms('Solar Power Systems')">Solar Power Systems</li>
-        <li onclick="getPrograms('Conservation Funding')">Conservation Funding</li>
-        <li onclick="getPrograms('Technical Assistance')">Technical Assistance</li>
-        <li onclick="getPrograms('Irrigation Systems')">Irrigation Systems</li>
-        <li onclick="getPrograms('Land Access')">Land Access</li>
-        <li onclick="getPrograms('Cold Storage')">Cold Storage</li>
-        <li onclick="getPrograms('Water Access')">Water Access</li>
-        <li onclick="getPrograms('Electricity')">Electricity</li>
-        <li onclick="getPrograms('0% & Low Interest Loans')">0% & Low Interest Loans</li>
-        <li onclick="getPrograms('Bridge Loans')">Bridge Loans</li>
-        <li onclick="getPrograms('Beginning Farmer Education')">Beginning Farmer Education</li>
-        <li onclick="getPrograms('Legal Assistace')">Legal Assistance</li>
-        <li onclick="getPrograms('Business Development')">Business Development</li>
-        <li onclick="getPrograms('Financial Planning')">Financial Planning</li>
-        <li onclick="getPrograms('Grant Writing Assistance')">Grant Writing Assistance</li>
+        <!-- <li><b>Location Needs</b></li> -->
+        <li class="locationneed" onclick="getPrograms('Cover Crop')">Cover Crop</li>
+        <li class="locationneed" onclick="getPrograms('Storage Facilities')">Storage Facilities</li>
+        <li class="locationneed" onclick="getPrograms('High Tunnel')">High Tunnel</li>
+        <li class="locationneed" onclick="getPrograms('Marketing')">Marketing</li>
+        <li class="locationneed" onclick="getPrograms('Equipment')">Equipment</li>
+        <li class="locationneed" onclick="getPrograms('Farm Tools')">Farm Tools</li>
+        <li class="locationneed" onclick="getPrograms('Solar Power Systems')">Solar Power Systems</li>
+        <li class="locationneed" onclick="getPrograms('Conservation Funding')">Conservation Funding</li>
+        <li class="locationneed" onclick="getPrograms('Technical Assistance')">Technical Assistance</li>
+        <li class="locationneed" onclick="getPrograms('Irrigation Systems')">Irrigation Systems</li>
+        <li class="locationneed" onclick="getPrograms('Land Access')">Land Access</li>
+        <li class="locationneed" onclick="getPrograms('Cold Storage')">Cold Storage</li>
+        <li class="locationneed" onclick="getPrograms('Water Access')">Water Access</li>
+        <li class="locationneed" onclick="getPrograms('Electricity')">Electricity</li>
+        <li class="locationneed" onclick="getPrograms('0% & Low Interest Loans')">0% & Low Interest Loans</li>
+        <li class="locationneed" onclick="getPrograms('Bridge Loans')">Bridge Loans</li>
+        <li class="locationneed" onclick="getPrograms('Beginning Farmer Education')">Beginning Farmer Education</li>
+        <li class="locationneed" onclick="getPrograms('Legal Assistance')">Legal Assistance</li>
+        <li class="locationneed" onclick="getPrograms('Business Development')">Business Development</li>
+        <li class="locationneed" onclick="getPrograms('Financial Planning')">Financial Planning</li>
+        <li class="locationneed" onclick="getPrograms('Grant Writing Assistance')">Grant Writing Assistance</li>
     </ul>
 
     <div id="programs"></div>
@@ -40,10 +50,10 @@
                 // console.log(programs[property]['Location Needs Covered'])
                 if (programs[property]['Location Needs Covered'].includes(need)) {
                     document.getElementById("programs").innerHTML += 
-                    "<div><h3>" + property + "</h3><ul><li>Agency/Source: " + programs[property]["Agency/Source"] + "</li>"
-                        + "<li>Overview: " + programs[property]["Overview"] + "</li><li>Eligibility: " + programs[property]["Eligibility"] + 
-                            "</li><li>Maryland Contacts: " + programs[property]["Maryland Contacts"] + 
-                                "</li><li>Useful Links: " + programs[property]["Useful Links"] + "</li></ul> </div>"
+                    "<div><h3>" + property + "</h3><ul><li><b>Agency/Source:</b> " + programs[property]["Agency/Source"] + "</li>"
+                        + "<li><b>Overview:</b> " + programs[property]["Overview"] + "</li><li><b>Eligibility:</b> " + programs[property]["Eligibility"] + 
+                            "</li><li><b>Maryland Contacts:</b> " + programs[property]["Maryland Contacts"] + 
+                                "</li><li><b>Useful Links:</b> " + programs[property]["Useful Links"] + "</li></ul> </div>"
                 }
             }
         }
