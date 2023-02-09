@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maryland Farm Resources</title>
+</head>
+<body>
+    <ul>
+        <li><b>Location Needs</b></li>
+        <li onclick="getPrograms('Cover Crop')">Cover Crop</li>
+        <li onclick="getPrograms('Storage Facilities')">Storage Facilities</li>
+        <li onclick="getPrograms('High Tunnel')">High Tunnel</li>
+        <li onclick="getPrograms('Marketing')">Marketing</li>
+        <li onclick="getPrograms('Equipment')">Equipment</li>
+        <li onclick="getPrograms('Farm Tools')">Farm Tools</li>
+        <li onclick="getPrograms('Solar Power Systems')">Solar Power Systems</li>
+        <li onclick="getPrograms('Conservation Funding')">Conservation Funding</li>
+        <li onclick="getPrograms('Technical Assistance')">Technical Assistance</li>
+        <li onclick="getPrograms('Irrigation Systems')">Irrigation Systems</li>
+        <li onclick="getPrograms('Land Access')">Land Access</li>
+        <li onclick="getPrograms('Cold Storage')">Cold Storage</li>
+        <li onclick="getPrograms('Water Access')">Water Access</li>
+        <li onclick="getPrograms('Electricity')">Electricity</li>
+        <li onclick="getPrograms('0% & Low Interest Loans')">0% & Low Interest Loans</li>
+        <li onclick="getPrograms('Bridge Loans')">Bridge Loans</li>
+        <li onclick="getPrograms('Beginning Farmer Education')">Beginning Farmer Education</li>
+        <li onclick="getPrograms('Legal Assistace')">Legal Assistance</li>
+        <li onclick="getPrograms('Business Development')">Business Development</li>
+        <li onclick="getPrograms('Financial Planning')">Financial Planning</li>
+        <li onclick="getPrograms('Grant Writing Assistance')">Grant Writing Assistance</li>
+    </ul>
+
+    <div id="programs"></div>
+    <script>
+        function getPrograms(need) {
+            document.getElementById("programs").innerHTML =""
+            for (const property in programs) {
+                // console.log(programs[property]['Location Needs Covered'])
+                if (programs[property]['Location Needs Covered'].includes(need)) {
+                    document.getElementById("programs").innerHTML += 
+                    "<div><h3>" + property + "</h3><ul><li>Agency/Source: " + programs[property]["Agency/Source"] + "</li>"
+                        + "<li>Overview: " + programs[property]["Overview"] + "</li><li>Eligibility: " + programs[property]["Eligibility"] + 
+                            "</li><li>Maryland Contacts: " + programs[property]["Maryland Contacts"] + 
+                                "</li><li>Useful Links: " + programs[property]["Useful Links"] + "</li></ul> </div>"
+                }
+            }
+        }
+        const programs = {
+            "Environmental Quality Incentives Program": {
+                "Location Needs Covered": ["Cover Crop", "High Tunnel", "Conservation Funding", "Irrigation Systems", "Water Access", "Electricity"],
+                "Agency/Source": "Natural Resources Conservation Services (NRCS)",
+                "Overview": "Provides technical and financial assistance to producers to address natural resource concerns and deliver environmental benefits such as improved water and air quality, conserved ground and surface water, increased soil health and reduced soil erosion and sedimentation, improved or created wildlife habitat, and mitigation against drought and increasing weather volatility",
+                "Eligibility": "Farmers, ranchers, and forest landowners who own or rent agricultural land are eligible.",
+                "Maryland Contacts": "Colleen Keifer colleen.kiefer@usda.gov 301-542-3081",
+                "Useful Links": "<a href='https://www.nrcs.usda.gov/sites/default/files/2022-10/EQIP-fact-sheet.pdf'>Environmental Quality Incentives Program</a>"
+            },
+            "Farm Storage Facility Loan Program": {
+                "Location Needs Covered": ["Storage Facilities"],
+                "Agency/Source": "Farm Service Agency (FSA)",
+                "Overview": "Farm Storage Facility Loans (FSFLs) provide low-interest financing for producers to store, handle and/or transport eligible commodities they produce.",
+                "Eligibility": "An eligible borrower is any person who is a landowner, landlord, leaseholder, tenant or sharecropper. Eligible borrowers must be able to show repayment ability and meet other requirements to qualify for a loan. Contact an FSA office for more details.",
+                "Maryland Contacts": "Leah Petersen leah.petersen@usda.gov",
+                "Useful Links": "<a href='https://www.fsa.usda.gov/Assets/USDA-FSA-Public/usdafiles/FactSheets/2022/farm_storage_facility_loan_programs_fact_sheet_july_2022.pdf'>Farm Storage Facility Loans</a>"
+            },
+            "Maryland Small Business Development Center (SBDC)": {
+                "Location Needs Covered": ["Marketing", "Business Development"],
+                "Agency/Source": "America's Small Business Development Centers",
+                "Overview": "Provides advice, consulting and support to entrepreneurs and small businesses across the state of Maryland. SBDC links private enterprise, government, higher education and local economic development organizations to provide high-quality training. confidential consulting and market and industry research to Maryland's small businesses.",
+                "Eligibility": "Not applicable",
+                "Maryland Contacts": "Kyle Bayliss - Regional Director - kbayliss@umd.edu - 301-403-8300",
+                "Useful Links": "<a href='https://www.marylandsbdc.org/'>Maryland Small Business Development Center</a>"
+            },
+            "Maryland Small Acreage Cover Crop Program": {
+                "Location Needs Covered": ["Cover Crop"],
+                "Agency/Source": "Maryland Department of Agriculture (MDA)",
+                "Overview": "Cover crop program aimed at helping communities build healthy soils, increase yields, sequester carbon, and improve local water quality. Growers will be reimbursed based on paid receipts with a maximum payment of up to $1,000 per growing season.",
+                "Eligibility": "Urban agriculture growers and small farmers who plant five or fewer acres of a cover crop may apply for cover crop grants",
+                "Maryland Contacts": "Bill Tharpe 410-841-5869 bill.tharpe@maryland.gov",
+                "Useful Links": "No link available. Please email bill.tharpe@maryland.gov for more information"
+            },
+            "Environmental Quality Incentives Program (EQIP) - High Tunnel Initiative": {
+                "Location Needs Covered": ["High Tunnel"],
+                "Agency/Source": "Natural Resources Conservation Services (NRCS)",
+                "Overview": "Financial assistance for purchasing a high tunnel system. The program only covers a percentage of the cost and works on a reimbursement system.",
+                "Eligibility": "Eligibility will be based on: An officially tax ID, a property deed or lease agreement, and a farm tract number",
+                "Maryland Contacts": "Please use the link provided to find your local service center and relative contact information.",
+                "Useful Links": "<a href='https://www.nrcs.usda.gov/programs-initiatives/eqip-high-tunnel-initiative#assistance'>High Tunnel Initiative | Natural Resources Conservation Service</a>"
+            },
+            "Microloans": {
+                "Location Needs Covered": ["Cold Storage", "0% & Low Interest Loans"],
+                "Agency/Source": "Farm Service Agency (FSA)",
+                "Overview": "The focus of Microloans is on the financing needs of small and beginning farmers. The maximum loan amount for a Microloan is $50,000.",
+                "Eligibility": "To qualify for assistance, the applicant must not be larger than a family-sized farmer, have a satisfactory history of meeting credit obligations, be unable to obtain credit elsewhere at reasonable rates and terms and meet all other loan eligibility requirements.",
+                "Maryland Contacts": "Leah Petersen leah.petersen@usda.gov",
+                "Useful Links": "<a href='https://www.fsa.usda.gov/programs-and-services/farm-loan-programs/microloans/'>Microloan Programs</a>"
+            },
+            "Future Harvest Tools Sharing & Rental": {
+                "Location Needs Covered": ["Farm Tools"],
+                "Agency/Source": "Future Harvest",
+                "Overview": "Farmers in need of equipment can browse the list, organized by equipment type, location, or grouped by any field to find out what’s available at the price/distance/terms that meet their needs.",
+                "Eligibility": "Not applicable",
+                "Maryland Contacts": "Lisa Garfield, Lisa@futureharvest.org",
+                "Useful Links": "<a href='https://futureharvest.org/resources/resources-for-farmers/tools-sharing-rental/'>Tools Sharing & Rental - Future Harvest</a>"
+            },
+            "Rural Energy for America Program (REAP)": {
+                "Location Needs Covered": ["Solar Power Systems"],
+                "Agency/Source": "Rural Development",
+                "Overview": "The program provides guaranteed loan financing and grant funding to agricultural producers and rural small businesses for renewable energy systems or to make energy efficiency improvements.",
+                "Eligibility": "Agricultural producers with at least 50% of their gross income coming from agricultural operations and/or Small businesses in eligible rural areas.",
+                "Maryland Contacts": "Letitia Nichols letitia.nichols@usda.gov",
+                "Useful Links": "<a href='https://www.rd.usda.gov/programs-services/energy-programs/rural-energy-america-program-renewable-energy-systems-energy-efficiency-improvement-guaranteed-loans'>Rural Energy for America Program Renewable Energy Systems & Energy Efficiency Improvement Guaranteed Loans & Grants | Rural Development</a>"
+            },
+            "Foodshed Capital Loans": {
+                "Location Needs Covered": ["Cold Storage", "0% & Low Interest Loans"],
+                "Agency/Source": "Foodshed Capital",
+                "Overview": "Loans up to $50,000 with the goal of building more equitable and regenerative foodsheds. 0% interest loans are available for Black Farmers.",
+                "Eligibility": "Own and operate a small-to-mid scale food producing farm or a food business that supports local, regenerative agriculture + Have a business that is registered in a state as either an LLC or a corporation + Demonstrate sufficient financial need",
+                "Maryland Contacts": "https://www.foodcap.org/contact",
+                "Useful Links": "<a href='https://www.foodcap.org/apply'>APPLY FOR A LOAN | FoodCap</a>"
+            },
+            "Foodshed Capital Business Support": {
+                "Location Needs Covered": ["Marketing"],
+                "Agency/Source": "",
+                Overview: "",
+                Eligibility: "",
+                "Maryland Contacts": "",
+                "Useful Links": ""
+            },
+            "Value Added Producer Grant": {
+                "Location Needs Covered": ["Marketing"],
+                "Agency/Source": "",
+                Overview: "",
+                Eligibility: "",
+                "Maryland Contacts": "",
+                "Useful Links": ""
+            },
+            "Low Interest Loans for Agricultural Conservation (LILAC)": {
+                "Location Needs Covered": ["0% & Low Interest Loans", "Bridge Loans"],
+                "Agency/Source": "",
+                Overview: "",
+                Eligibility: "",
+                "Maryland Contacts": "",
+                "Useful Links": ""
+            },
+            "Next Generation Farmland Acquisition Program": {
+                "Location Needs Covered": ["Land Access"],
+                "Agency/Source": "",
+                Overview: "",
+                Eligibility: "",
+                "Maryland Contacts": "",
+                "Useful Links": ""
+            },
+            "SMADC Farm Equipment Rental": {
+                "Location Needs Covered": ["Equipment"],
+                "Agency/Source": "",
+                Overview: "",
+                Eligibility: "",
+                "Maryland Contacts": "",
+                "Useful Links": ""
+            },
+            "Agricultural Law Education Initiative (ALEI)": {
+                "Location Needs Covered": ["Legal Assistance"],
+                "Agency/Source": "",
+                Overview: "",
+                Eligibility: "",
+                "Maryland Contacts": "",
+                "Useful Links": ""
+            },
+            "Maryland Farmlink Farm Equipment Rental": {
+                "Location Needs Covered": ["Equipment"],
+                "Agency/Source": "",
+                Overview: "",
+                Eligibility: "",
+                "Maryland Contacts": "",
+                "Useful Links": ""
+            },
+            "Delmarva Farmer Newspaper classified section": {
+                "Location Needs Covered": ["Equipment"],
+                "Agency/Source": "",
+                Overview: "",
+                Eligibility: "",
+                "Maryland Contacts": "",
+                "Useful Links": ""
+            },
+            "Beginning Farmer Success Program": {
+                "Location Needs Covered": ["Beginning Farmer Education"],
+                "Agency/Source": "",
+                Overview: "",
+                Eligibility: "",
+                "Maryland Contacts": "",
+                "Useful Links": ""
+            },
+            "Future Harvest Beginning Farmer Program": {
+                "Location Needs Covered": ["Beginning Farmer Education"],
+                "Agency/Source": "",
+                Overview: "",
+                Eligibility: "",
+                "Maryland Contacts": "",
+                "Useful Links": ""
+            },
+            "Black Butterfly Urban Farmer Academy": {
+                "Location Needs Covered": ["Beginning Farmer Education"],
+                "Agency/Source": "",
+                Overview: "",
+                Eligibility: "",
+                "Maryland Contacts": "",
+                "Useful Links": ""
+            },
+            "University of Maryland Extension": {
+                "Location Needs Covered": ["Marketing", "Technical Assistance"],
+                "Agency/Source": "",
+                Overview: "",
+                Eligibility: "",
+                "Maryland Contacts": "",
+                "Useful Links": ""
+            },
+            "Maryland Rural Enterprise Development Center (MREDC)": {
+                "Location Needs Covered": ["Marketing", "Financial Planning", "Business Development"],
+                "Agency/Source": "",
+                Overview: "",
+                Eligibility: "",
+                "Maryland Contacts": "",
+                "Useful Links": ""
+            },
+            "Maryland Farmlink": {
+                "Location Needs Covered": ["Land Access"],
+                "Agency/Source": "",
+                Overview: "",
+                Eligibility: "",
+                "Maryland Contacts": "",
+                "Useful Links": ""
+            },
+            "Natural Resource Conservation Service (NRCS)": {
+                "Location Needs Covered": ["Technical Assistance"],
+                "Agency/Source": "",
+                Overview: "",
+                Eligibility: "",
+                "Maryland Contacts": "",
+                "Useful Links": ""
+            },
+            "Million Acre Challenge": {
+                "Location Needs Covered": ["Technical Assistance"],
+                "Agency/Source": "",
+                Overview: "",
+                Eligibility: "",
+                "Maryland Contacts": "",
+                "Useful Links": ""
+            },
+            "Stepwell Strategies": {
+                "Location Needs Covered": ["Grant Writing Assistance"],
+                "Agency/Source": "",
+                Overview: "",
+                Eligibility: "",
+                "Maryland Contacts": "",
+                "Useful Links": ""
+            },
+            "Farmraise": {
+                "Location Needs Covered": ["Grant Writing Assistance"],
+                "Agency/Source": "",
+                Overview: "",
+                Eligibility: "",
+                "Maryland Contacts": "",
+                "Useful Links": ""
+            },
+            "Conservation Stewardship Program (CSP)": {
+                "Location Needs Covered": [],
+                "Agency/Source": "",
+                Overview: "",
+                Eligibility: "",
+                "Maryland Contacts": "",
+                "Useful Links": ""
+            },
+            "Grow and Fortify Value Added Consulting": {
+                "Location Needs Covered": ["Business Development"],
+                "Agency/Source": "",
+                Overview: "",
+                Eligibility: "",
+                "Maryland Contacts": "",
+                "Useful Links": ""
+            },
+            "Eco City Farm Beginning Farmer Training Program": {
+                "Location Needs Covered": ["Beginning Farmer Education"],
+                "Agency/Source": "",
+                Overview: "",
+                Eligibility: "",
+                "Maryland Contacts": "",
+                "Useful Links": ""
+            },
+            "Watkins Park Farm Incubator Program": {
+                "Location Needs Covered": ["Beginning Farmer Education"],
+                "Agency/Source": "",
+                Overview: "",
+                Eligibility: "",
+                "Maryland Contacts": "",
+                "Useful Links": ""
+            },
+            "Buy Fresh Buy Local Chesapeake Chapter": {
+                "Location Needs Covered": ["Marketing"],
+                "Agency/Source": "",
+                Overview: "",
+                Eligibility: "",
+                "Maryland Contacts": "",
+                "Useful Links": ""
+            },
+            "Farmland Information Center": {
+                "Location Needs Covered": ["Land Access"],
+                "Agency/Source": "",
+                Overview: "",
+                Eligibility: "",
+                "Maryland Contacts": "",
+                "Useful Links": ""
+            },
+            "County Economic Development Centers": {
+                "Location Needs Covered": [],
+                "Agency/Source": "",
+                Overview: "",
+                Eligibility: "",
+                "Maryland Contacts": "",
+                "Useful Links": ""
+            },
+            "USDA Local Food Directories": {
+                "Location Needs Covered": ["Marketing"],
+                "Agency/Source": "",
+                Overview: "",
+                Eligibility: "",
+                "Maryland Contacts": "",
+                "Useful Links": ""
+            },
+            "Chesapeake Ag Innovation Center": {
+                "Location Needs Covered": [],
+                "Agency/Source": "",
+                Overview: "",
+                Eligibility: "",
+                "Maryland Contacts": "",
+                "Useful Links": ""
+            },
+            "UMD Extension Cultivating Entrepreneurship": {
+                "Location Needs Covered": ["Business Development"],
+                "Agency/Source": "",
+                Overview: "",
+                Eligibility: "",
+                "Maryland Contacts": "",
+                "Useful Links": ""
+            }
+        }
+    </script>
+</body>
+</html>
